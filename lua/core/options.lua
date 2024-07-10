@@ -7,6 +7,7 @@ opt.tabstop=4
 opt.shiftwidth=4
 opt.expandtab=false
 opt.autoindent=true
+opt.smartindent=true
 
 opt.splitright=true
 
@@ -20,3 +21,5 @@ vim.api.nvim_create_autocmd({"TextYankPost"},{
 		})
 	end,
 })
+
+opt.termguicolors=true

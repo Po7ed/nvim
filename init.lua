@@ -1,4 +1,5 @@
-vim.opt.termguicolors=true
+vim.g.loaded_netrw=1
+vim.g.loaded_netrwPlugin=1
 
 require("core.options")
 require("core.keymaps")
@@ -29,3 +30,4 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({{import="plugins"}})
 
 -- require("lazy").setup("plugins")
+vim.cmd("colorscheme tokyonight-night")
