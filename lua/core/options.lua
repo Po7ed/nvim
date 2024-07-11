@@ -6,8 +6,8 @@ opt.relativenumber=true
 opt.tabstop=4
 opt.shiftwidth=4
 opt.expandtab=false
-opt.autoindent=true
-opt.smartindent=true
+opt.autoindent=false
+opt.smartindent=false
 
 opt.splitright=true
 
