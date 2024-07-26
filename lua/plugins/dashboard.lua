@@ -41,10 +41,16 @@ return {
 					key = "p",
                 },
 				{
-					icon = "Ms ",
+					icon = "  ",
 					desc = "Mason",
 					action = "Mason",
 					key = "m",
+				},
+				{
+					icon = "  ",
+					desc = "Nvim Tree",
+					action = "NvimTreeToggle",
+					key = "t",
 				},
 				{
 					icon = "  ",
