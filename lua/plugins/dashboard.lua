@@ -22,11 +22,36 @@ return {
                 " ",
             },
             center = {
+				{
+					icon = "  ",
+					desc = "New File",
+					action = "enew",
+					key = "n",
+				},
+				{
+					icon = "󰒲  ",
+					desc = "Lazy",
+					action = "Lazy",
+					key = "l",
+				},
                 {
                     icon = "  ",
                     desc = "Lazy Profile",
                     action = "Lazy profile",
+					key = "p",
                 },
+				{
+					icon = "Ms ",
+					desc = "Mason",
+					action = "Mason",
+					key = "m",
+				},
+				{
+					icon = "  ",
+					desc = "Quit",
+					action = "qa",
+					key = "q",
+				},
                 -- {
                 --     icon = "  ",
                 --     desc = "Edit preferences   ",
@@ -43,8 +68,15 @@ return {
                 --     action = "lua require('plugins.utils').about()",
                 -- },
             },
-            -- footer = { "🧊 Hope that you enjoy using IceNvim 😀😀😀" },
-			fotter={"Enjoy!"}
+			footer = function()
+				local sta=require("lazy").stats()
+				return
+				{
+					"Startuptime: " .. sta.startuptime .. " ms",
+					"Plugins: " .. sta.loaded .. " loaded / " .. sta.count .. " installed",
+					"Enjoy LightVim!",
+				}
+			end,
         },
     }
   end,
