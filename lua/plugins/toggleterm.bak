@@ -1,0 +1,16 @@
+return
+{
+	'akinsho/toggleterm.nvim',
+	version = "*",
+	config = true
+}
+-- {
+-- 	'akinsho/toggleterm.nvim',
+-- 	version = "*",
+-- 	lazy=true,
+-- 	event="VeryLazy",
+-- 	opts = 
+-- 	{
+-- 		[[ things you want to change go here]]
+-- 	}
+-- }

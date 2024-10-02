@@ -21,3 +21,5 @@ vim.api.nvim_create_autocmd({"TextYankPost"},{
 })
 
 opt.termguicolors=true
+
+opt.scrolloff=5
