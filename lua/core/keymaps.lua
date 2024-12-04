@@ -3,7 +3,7 @@ vim.g.mapleader=" "
 local km=vim.keymap
 
 -- I have ahk :)
--- km.set("i","jk","<Esc>")
+km.set("i","jk","<Esc>")
 
 -- Split
 km.set("n","<leader>sv","<C-w>v",{desc="Split Vertically",silent=true})
@@ -21,6 +21,11 @@ km.set("n","<leader>sx","<C-w>x",{desc="Swap",silent=true})
 -- better up/down
 km.set("n","j","v:count==0?'gj':'j'",{desc="Down",expr=true,silent=true})
 km.set("n","k","v:count==0?'gk':'k'",{desc="Up",expr=true,silent=true})
+
+km.set("n","<A-j>","5j",{desc="Super Down",silent=true})
+km.set("n","<A-k>","5k",{desc="Super Up",silent=true})
+km.set("n","<A-h>","10h",{desc="Super Left",silent=true})
+km.set("n","<A-l>","10l",{desc="Super Right",silent=true})
 
 -- Move to window using the <ctrl> hjkl keys
 km.set("n","<C-h>","<C-w>h",{desc="Go to Left Window",remap=true,silent=true})
@@ -42,6 +47,7 @@ km.set("n","<leader>bD","<cmd>bd!<cr>",{desc="Delete Buffer!",silent=true})
 
 -- save file
 km.set({"i","x","n","s"},"<C-s>","<cmd>w<cr>",{desc="Save File",silent=true})
+km.set("n","<leader>w","<cmd>w<cr>",{desc="Save File",silent=true})
 
 -- lazy
 km.set("n","<leader>l","<cmd>Lazy<cr>",{desc="Lazy",silent=true})
@@ -73,3 +79,6 @@ km.set("n","<leader>e>","<cmd>NvimTreeResize +5<cr>",{desc="Resize(+5) the Tree"
 -- vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 -- vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
+km.set("n","<F8>","<cmd>!g++ % -o %< -O2 -std=c++14 -w<cr>",{desc="Compile with O2",silent=true})
+km.set("n","<F9>","<cmd>!g++ % -o %< -g -std=c++14 -Wall -Wextra -Wshadow<cr>",{desc="Compile with debug",silent=true})
+km.set("n","<F10>","<cmd>%<<cr>",{desc="Compile with debug",silent=true})

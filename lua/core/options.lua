@@ -5,6 +5,7 @@ opt.relativenumber=true
 
 opt.tabstop=4
 opt.shiftwidth=4
+opt.softtabstop=4
 opt.expandtab=false
 
 opt.splitright=true
@@ -23,3 +24,10 @@ vim.api.nvim_create_autocmd({"TextYankPost"},{
 opt.termguicolors=true
 
 opt.scrolloff=5
+
+opt.autoindent=true
+opt.smartindent=true
+opt.cindent=true
+
+opt.list=true
+opt.lcs="tab:| ,trail:-,lead:."
