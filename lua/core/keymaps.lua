@@ -79,6 +79,6 @@ km.set("n","<leader>e>","<cmd>NvimTreeResize +5<cr>",{desc="Resize(+5) the Tree"
 -- vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 -- vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
-km.set("n","<F8>","<cmd>!g++ % -o %< -O2 -std=c++14 -w<cr>",{desc="Compile with O2",silent=true})
-km.set("n","<F9>","<cmd>!g++ % -o %< -g -std=c++14 -Wall -Wextra -Wshadow<cr>",{desc="Compile with debug",silent=true})
-km.set("n","<F10>","<cmd>%<<cr>",{desc="Compile with debug",silent=true})
+km.set("n","<F8>","<cmd>vsplit term://g++ % -o %< -O2 -std=c++14 -w<cr>i",{desc="Compile with O2",silent=true})
+km.set("n","<F9>","<cmd>vsplit term://g++ % -o %< -g -std=c++14 -Wall -Wextra -Wshadow<cr>i",{desc="Compile with debug",silent=true})
+km.set("n","<F10>","<cmd>vsplit term://time ./%<<cr>i",{desc="Run Program",silent=true})
