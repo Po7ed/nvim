@@ -65,5 +65,5 @@ vim.api.nvim_create_autocmd("CmdlineEnter", {
 -- 	}
 -- })
 
-vim.cmd("colorscheme tokyonight-day")
-vim.cmd("colorscheme tokyonight-day")
+vim.cmd("colorscheme tokyonight-night")
+-- vim.cmd("colorscheme tokyonight-day")

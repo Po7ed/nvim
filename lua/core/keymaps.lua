@@ -5,6 +5,11 @@ local km=vim.keymap
 -- I have ahk :)
 km.set("i","jk","<Esc>")
 
+-- Noice blocked the text!!!
+km.set("n","<leader>nd","<cmd>NoiceDismiss<cr>",{desc="Noice Dismiss",silent=true})
+
+-- km.set("i","<BS>","<Esc>lcb",{desc="Delete to the begin of current word",silent=true})
+
 -- Split
 km.set("n","<leader>sv","<C-w>v",{desc="Split Vertically",silent=true})
 km.set("n","<leader>ss","<C-w>s",{desc="Split",silent=true})
@@ -22,16 +27,16 @@ km.set("n","<leader>sx","<C-w>x",{desc="Swap",silent=true})
 km.set("n","j","v:count==0?'gj':'j'",{desc="Down",expr=true,silent=true})
 km.set("n","k","v:count==0?'gk':'k'",{desc="Up",expr=true,silent=true})
 
-km.set("n","<A-j>","5j",{desc="Super Down",silent=true})
-km.set("n","<A-k>","5k",{desc="Super Up",silent=true})
-km.set("n","<A-h>","10h",{desc="Super Left",silent=true})
-km.set("n","<A-l>","10l",{desc="Super Right",silent=true})
+km.set({"n","v"},"<A-j>","5j",{desc="Super Down",silent=true})
+km.set({"n","v"},"<A-k>","5k",{desc="Super Up",silent=true})
+km.set({"n","v"},"<A-h>","10h",{desc="Super Left",silent=true})
+km.set({"n","v"},"<A-l>","10l",{desc="Super Right",silent=true})
 
 -- Move to window using the <ctrl> hjkl keys
-km.set("n","<C-h>","<C-w>h",{desc="Go to Left Window",remap=true,silent=true})
-km.set("n","<C-j>","<C-w>j",{desc="Go to Lower Window",remap=true,silent=true})
-km.set("n","<C-k>","<C-w>k",{desc="Go to Upper Window",remap=true,silent=true})
-km.set("n","<C-l>","<C-w>l",{desc="Go to Right Window",remap=true,silent=true})
+-- km.set("n","<C-h>","<C-w>h",{desc="Go to Left Window",remap=true,silent=true})
+-- km.set("n","<C-j>","<C-w>j",{desc="Go to Lower Window",remap=true,silent=true})
+-- km.set("n","<C-k>","<C-w>k",{desc="Go to Upper Window",remap=true,silent=true})
+-- km.set("n","<C-l>","<C-w>l",{desc="Go to Right Window",remap=true,silent=true})
 
 -- Resize window using <ctrl> arrow keys
 km.set("n","<C-Up>","<cmd>resize +2<cr>",{desc="Increase Window Height",silent=true})
@@ -42,8 +47,8 @@ km.set("n","<C-Right>","<cmd>vertical resize +2<cr>",{desc="Increase Window Widt
 -- buffers
 km.set("n","<S-h>","<cmd>bprevious<cr>",{desc="Prev Buffer",silent=true})
 km.set("n","<S-l>","<cmd>bnext<cr>",{desc="Next Buffer",silent=true})
-km.set("n","<leader>bd","<cmd>bd<cr>",{desc="Delete Buffer",silent=true})
-km.set("n","<leader>bD","<cmd>bd!<cr>",{desc="Delete Buffer!",silent=true})
+-- km.set("n","<leader>bd","<cmd>bd<cr>",{desc="Delete Buffer",silent=true})
+-- km.set("n","<leader>bD","<cmd>bd!<cr>",{desc="Delete Buffer!",silent=true})
 
 -- save file
 km.set({"i","x","n","s"},"<C-s>","<cmd>w<cr>",{desc="Save File",silent=true})
@@ -79,6 +84,10 @@ km.set("n","<leader>e>","<cmd>NvimTreeResize +5<cr>",{desc="Resize(+5) the Tree"
 -- vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 -- vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
+km.set("n","<F5>","<cmd>vsplit term://gdb %<<cr>i",{desc="Debug Program",silent=true})
+km.set("n","<F6>","<cmd>vsplit term://g++ % -o %< -g -std=c++14 -Wall -Wextra -Wshadow<cr>i",{desc="Compile with debug",silent=true})
+km.set("n","<F7>","<cmd>vsplit term://./%<cr>i",{desc="Run File",silent=true})
 km.set("n","<F8>","<cmd>vsplit term://g++ % -o %< -O2 -std=c++14 -w<cr>i",{desc="Compile with O2",silent=true})
-km.set("n","<F9>","<cmd>vsplit term://g++ % -o %< -g -std=c++14 -Wall -Wextra -Wshadow<cr>i",{desc="Compile with debug",silent=true})
+km.set("n","<F9>","<cmd>vsplit term://g++ % -o %< -g -std=c++14 -Wall -Wextra -Wshadow -fsanitize=address<cr>i",{desc="Compile with debug",silent=true})
 km.set("n","<F10>","<cmd>vsplit term://time ./%<<cr>i",{desc="Run Program",silent=true})
+km.set("n","<leader>rm","<cmd>e term://rich % --force-terminal --markdown --rule --padding 1 --hyperlinks --pager<cr>i",{desc="Render Markdown",silent=true})

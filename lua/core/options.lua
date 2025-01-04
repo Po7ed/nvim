@@ -1,5 +1,9 @@
 local opt=vim.opt
 
+-- if vim.g.neovide then
+	vim.o.guifont = "Cascadia Code NF:h16"
+-- end
+
 opt.number=true
 opt.relativenumber=true
 
@@ -24,6 +28,8 @@ vim.api.nvim_create_autocmd({"TextYankPost"},{
 opt.termguicolors=true
 
 opt.scrolloff=5
+-- opt.nowrap=true
+-- opt.wrap=false
 
 opt.autoindent=true
 opt.smartindent=true
@@ -31,3 +37,6 @@ opt.cindent=true
 
 opt.list=true
 opt.lcs="tab:| ,trail:-,lead:."
+
+opt.acd=true
+opt.ar=true
