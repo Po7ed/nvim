@@ -28,8 +28,9 @@ vim.api.nvim_create_autocmd({"TextYankPost"},{
 opt.termguicolors=true
 
 opt.scrolloff=5
+opt.cursorline=true
 -- opt.nowrap=true
--- opt.wrap=false
+opt.wrap=false
 
 opt.autoindent=true
 opt.smartindent=true
