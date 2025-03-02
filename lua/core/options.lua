@@ -14,7 +14,7 @@ opt.expandtab=false
 
 opt.splitright=true
 
-opt.clipboard:append("unnamedplus")
+-- opt.clipboard:append("unnamedplus")
 
 vim.api.nvim_create_autocmd({"TextYankPost"},{
 	pattern={"*"},
