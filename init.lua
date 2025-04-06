@@ -43,6 +43,8 @@ require("lazy").setup({{import="plugins"}})
 -- vim.cmd("colorscheme tokyonight-day")
 -- vim.cmd("colorscheme tokyonight-night")
 
+require("lsp.lsp")
+require("lsp.cmp")
 
 -- disable reading shada. Read shada while entering command line.
 vim.opt.shadafile = "NONE"

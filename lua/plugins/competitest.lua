@@ -6,9 +6,25 @@ return
 	{
 		complie_command=
 		{
-			cpp={exec="g++",args={"$(FNAME)","-o","$(FNOEXT)","-g","-std=c++14","-Wall","-Wextra","-Wshadow","-fsanitize=address"}},
+			cpp=
+			{
+				exec="g++",
+				args=
+				{
+					"$(FNAME)",
+					"-o",
+					"$(FNOEXT)",
+					"-g",
+					"-std=c++14",
+					"-Wall",
+					"-Wextra",
+					"-Wshadow",
+					"-Wconversion",
+					"-fsanitize=address,undefined"
+				}
+			},
 		},
-		maximum_time=10000,
+		maximum_time=2000,
 		testcases_input_file_format="$(FNOEXT)$(TCNUM).in",
 		testcases_output_file_format="$(FNOEXT)$(TCNUM).ans",
 		-- template_file="~/oi/template.$(FEXT)",
