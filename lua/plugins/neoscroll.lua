@@ -1,8 +1,12 @@
-return {
+return
+{
 	"karb94/neoscroll.nvim",
 	lazy=true,
-	event="User LightLoad",
+	event="VeryLazy",
 	config = function ()
-		require('neoscroll').setup({})
-	end
+		require('neoscroll').setup({
+			easing = "quadratic",
+			-- duration_multiplier = 0.75,
+		})
+	end,
 }
