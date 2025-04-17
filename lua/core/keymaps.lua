@@ -95,7 +95,7 @@ km.set("n","<leader>cs","<cmd>CompetiTest show_ui<cr>",{desc="CompetiTest Show U
 km.set("n","<leader>cf","<cmd>CompetiTest receive<cr>",{desc="CompetiTest Receive (Fetch)",silent=true})
 km.set("n","<leader>ca","<cmd>CompetiTest add_testcase<cr>",{desc="CompetiTest Add Testcase",silent=true})
 km.set("n","<leader>ce","<cmd>CompetiTest edit_testcase<cr>",{desc="CompetiTest Edit Testcase",silent=true})
-km.set("n","<leader>ce","<cmd>CompetiTest delete_testcase<cr>",{desc="CompetiTest Delete Testcase",silent=true})
+km.set("n","<leader>cd","<cmd>CompetiTest delete_testcase<cr>",{desc="CompetiTest Delete Testcase",silent=true})
 
 km.set("n","<F5>","<cmd>vsplit term://g++ % -o %< -Og -g -std=c++14 -w && gdb %<<cr>i",{desc="Debug Program",silent=true})
 km.set("n","<F6>","<cmd>vsplit term://./%<cr>i",{desc="Run File",silent=true})
