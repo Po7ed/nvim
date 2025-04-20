@@ -8,7 +8,6 @@ return {
 				-- https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=lightvim
 				header = {
 					" ",
-					" ",
 					"   ██▓     ▒█████    ██████  ▐██▌",
 					"  ▓██▒    ▒██▒  ██▒▒██    ▒  ▐██▌",
 					"  ▒██░    ▒██░  ██▒░ ▓██▄    ▐██▌",
@@ -18,7 +17,6 @@ return {
 					"  ░ ░ ▒  ░  ░ ▒ ▒░ ░ ░▒  ░ ░ ░  ░",
 					"    ░ ░   ░ ░ ░ ▒  ░  ░  ░      ░",
 					"      ░  ░    ░ ░        ░   ░   ",
-					" ",
 					" ",
 				},
 				center=
@@ -94,11 +92,13 @@ return {
 						local sta=require("lazy").stats()
 						return
 						{
-							"⚡" .. sta.startuptime .. " ms",
-							" " .. sta.loaded .. " / " .. sta.count,
+							" " .. sta.startuptime .. " ms",
+							"󰩦 " .. sta.loaded .. " / " .. sta.count,
+							-- " Los! Los! Los!",
 						}
 					end,
 				},
+				hide={tabline=false},
 			}
 		end,
 		dependencies = { {'nvim-tree/nvim-web-devicons'}}

@@ -5,8 +5,8 @@ return
 	event="VeryLazy",
 	config = function ()
 		require('neoscroll').setup({
-			easing = "quadratic",
-			-- duration_multiplier = 0.75,
+			easing = "sine",
+			-- duration_multiplier = 1.5,
 		})
 	end,
 }

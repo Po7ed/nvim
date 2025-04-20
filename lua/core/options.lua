@@ -13,6 +13,7 @@ opt.softtabstop=4
 opt.expandtab=false
 
 opt.splitright=true
+opt.splitbelow=true
 
 -- opt.clipboard:append("unnamedplus")
 
@@ -28,8 +29,8 @@ vim.api.nvim_create_autocmd({"TextYankPost"},{
 opt.termguicolors=true
 
 opt.scrolloff=5
+opt.sidescrolloff=10
 opt.cursorline=true
--- opt.nowrap=true
 opt.wrap=false
 
 opt.autoindent=true

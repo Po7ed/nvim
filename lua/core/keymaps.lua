@@ -2,7 +2,6 @@ vim.g.mapleader=" "
 
 local km=vim.keymap
 
--- I have ahk :)
 km.set("i","jk","<Esc>")
 km.set("t","jk","<C-\\><C-n>")
 
@@ -76,6 +75,7 @@ km.set("n","<leader>et","<cmd>NvimTreeToggle<cr>",{desc="Toggle the Tree",silent
 km.set("n","<leader>ee","<cmd>NvimTreeToggle<cr>",{desc="Toggle the Tree",silent=true})
 km.set("n","<leader>ef","<cmd>NvimTreeFocus<cr>",{desc="Tree Focus",silent=true})
 km.set("n","<leader>er","<cmd>NvimTreeRefresh<cr>",{desc="Refresh the Tree",silent=true})
+km.set("n","<leader>eR","<cmd>NvimTreeClose<cr><cmd>NvimTreeOpen<cr>",{desc="Force Refresh the Tree",silent=true})
 km.set("n","<leader>e-","<cmd>NvimTreeCollapse<cr>",{desc="Collapse the Tree",silent=true})
 km.set("n","<leader>e,","<cmd>NvimTreeResize -1<cr>",{desc="Resize(-1) the Tree",silent=true})
 km.set("n","<leader>e.","<cmd>NvimTreeResize +1<cr>",{desc="Resize(+1) the Tree",silent=true})
@@ -99,7 +99,10 @@ km.set("n","<leader>cd","<cmd>CompetiTest delete_testcase<cr>",{desc="CompetiTes
 
 km.set("n","<F5>","<cmd>vsplit term://g++ % -o %< -Og -g -std=c++14 -w && gdb %<<cr>i",{desc="Debug Program",silent=true})
 km.set("n","<F6>","<cmd>vsplit term://./%<cr>i",{desc="Run File",silent=true})
-km.set("n","<F8>","<cmd>vsplit term://g++ % -o %< -O2 -std=c++14 -w<cr>i",{desc="Compile with O2",silent=true})
+km.set("n","<F8>","<cmd>vsplit term://g++ % -o %< -O2 -std=c++14 -w -DONLINE_JUDGE<cr>i",{desc="Compile with O2",silent=true})
 km.set("n","<F9>","<cmd>vsplit term://g++ % -o %< -g -std=c++14 -Wall -Wextra -Wshadow -Wconversion -fsanitize=address,undefined<cr>i",{desc="Compile with debug",silent=true})
 km.set("n","<F10>","<cmd>vsplit term://time ./%<<cr>i",{desc="Run Program",silent=true})
 km.set("n","<leader>rm","<cmd>e term://rich % --force-terminal --markdown --rule --padding 1 --hyperlinks --pager<cr>i",{desc="Render Markdown",silent=true})
+
+km.set("n","<leader>h","<cmd>HopWord<cr>",{desc="Hop Word",silent=true})
+km.set("n","S","<cmd>HopWord<cr>",{desc="Hop Word",silent=true})

@@ -1,9 +1,26 @@
+-- get OS
+if vim.fn.exists('g:os') == 0 then
+	local is_windows = vim.fn.has("win64") == 1 or vim.fn.has("win32") == 1 or vim.fn.has("win16") == 1
+	if is_windows then
+		vim.g.os = "Windows"
+	elseif vim.fn.has("wsl")==1 then
+		vim.g.os="WSL"
+	else
+		local uname_output = vim.fn.system('uname')
+		vim.g.os = string.gsub(uname_output, '\n', '')
+	end
+end
+
+-- load options and keymaps
+require("core.options")
+require("core.keymaps")
+require("core.autocmds")
+
+-- nvim-tree: disable netrw
 vim.g.loaded_netrw=1
 vim.g.loaded_netrwPlugin=1
 
-require("core.options")
-require("core.keymaps")
-
+-- auto install lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	vim.fn.system({
@@ -17,30 +34,14 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- deleted: User Load for non-dashboard buffers
 -- https://shaobin-jiang.github.io/blog/posts/neovim-startup/
 -- https://github.com/Shaobin-Jiang/IceNvim/blob/master/lua/plugins/config.lua
-vim.api.nvim_create_autocmd("User", {
-	pattern = "VeryLazy",
-	callback = function()
-		local function _trigger()
-			vim.api.nvim_exec_autocmds("User", { pattern = "LightLoad" })
-		end
 
-		if vim.bo.filetype == "dashboard" then
-			vim.api.nvim_create_autocmd("BufRead", {
-				once = true,
-				callback = _trigger,
-			})
-		else
-			_trigger()
-		end
-	end,
-})
+-- require("lazy").setup({{import="plugins"}})
+require("lazy").setup("plugins")
 
-require("lazy").setup({{import="plugins"}})
-
--- require("lazy").setup("plugins")
-
+-- load lsp
 require("lsp.lsp")
 require("lsp.cmp")
 
@@ -55,6 +56,5 @@ vim.api.nvim_create_autocmd("CmdlineEnter", {
 	end,
 })
 
-
 vim.cmd("colorscheme tokyonight-night")
--- vim.cmd("colorscheme tokyonight-day")
+
