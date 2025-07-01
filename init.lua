@@ -11,6 +11,10 @@ if vim.fn.exists('g:os') == 0 then
 	end
 end
 
+if vim.g.vscode then
+	return
+end
+
 -- load options and keymaps
 require("core.options")
 require("core.keymaps")

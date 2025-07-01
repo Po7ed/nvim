@@ -1,8 +1,14 @@
 local opt=vim.opt
 
--- if vim.g.neovide then
-	vim.o.guifont = "Cascadia Code NF:h16"
--- end
+if vim.g.neovide then
+	vim.o.guifont = "Cascadia Code NF:h14"
+	-- vim.g.neovide_background_image = "https://cdn.luogu.com.cn/upload/image_hosting/xkx3fvz5.png"
+	-- vim.g.neovide_background_image = "/mnt/G/zjd/58186011_p0_.jpg"
+	-- vim.g.neovide_background_opacity = 0.8
+	-- vim.g.neovide_neovide_opacity = 0.5
+	vim.g.neovide_opacity = 0.8
+	vim.g.neovide_normal_opacity = 0.8
+end
 
 opt.number=true
 opt.relativenumber=true

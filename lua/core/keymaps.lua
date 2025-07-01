@@ -34,6 +34,8 @@ km.set({"n","v"},"<A-j>","5j",{desc="Super Down",silent=true})
 km.set({"n","v"},"<A-k>","5k",{desc="Super Up",silent=true})
 km.set({"n","v"},"<A-h>","10h",{desc="Super Left",silent=true})
 km.set({"n","v"},"<A-l>","10l",{desc="Super Right",silent=true})
+km.set({"n","v"},"<A-y>","5<C-y>",{desc="Super C-y",silent=true})
+km.set({"n","v"},"<A-e>","5<C-e>",{desc="Super C-e",silent=true})
 
 -- Move to window using the <ctrl> hjkl keys
 km.set("n","<C-h>","<C-w>h",{desc="Go to Left Window",remap=true,silent=true})
@@ -97,7 +99,7 @@ km.set("n","<leader>ca","<cmd>CompetiTest add_testcase<cr>",{desc="CompetiTest A
 km.set("n","<leader>ce","<cmd>CompetiTest edit_testcase<cr>",{desc="CompetiTest Edit Testcase",silent=true})
 km.set("n","<leader>cd","<cmd>CompetiTest delete_testcase<cr>",{desc="CompetiTest Delete Testcase",silent=true})
 
-km.set("n","<F5>","<cmd>vsplit term://g++ % -o %< -Og -g -std=c++14 -w && gdb %<<cr>i",{desc="Debug Program",silent=true})
+km.set("n","<F5>","<cmd>vsplit term://g++ % -o %< -g -std=c++14 -w && gdb %<<cr>i",{desc="Debug Program",silent=true})
 km.set("n","<F6>","<cmd>vsplit term://./%<cr>i",{desc="Run File",silent=true})
 km.set("n","<F8>","<cmd>vsplit term://g++ % -o %< -O2 -std=c++14 -w -DONLINE_JUDGE<cr>i",{desc="Compile with O2",silent=true})
 km.set("n","<F9>","<cmd>vsplit term://g++ % -o %< -g -std=c++14 -Wall -Wextra -Wshadow -Wconversion -fsanitize=address,undefined<cr>i",{desc="Compile with debug",silent=true})
