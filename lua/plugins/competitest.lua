@@ -26,7 +26,7 @@ return
 				}
 			},
 		},
-		maximum_time=2000,
+		maximum_time=5000,
 		testcases_input_file_format="$(FNOEXT)$(TCNUM).in",
 		testcases_output_file_format="$(FNOEXT)$(TCNUM).ans",
 		-- template_file="~/oi/template.$(FEXT)",

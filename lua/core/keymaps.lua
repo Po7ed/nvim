@@ -5,6 +5,12 @@ local km=vim.keymap
 km.set("i","jk","<Esc>")
 km.set("t","jk","<C-\\><C-n>")
 
+-- km.set("c","<A-[>","<up>",{desc="Up",silent=true});
+-- km.set("c","<A-]>","<down>",{desc="Down",silent=true});
+
+km.set("n","<leader>d","<cmd>Dashboard<cr>",{desc="Open Dashboard",silent=true})
+km.set("n","<leader>t","<cmd>Telescope<cr>",{desc="Open Telescope",silent=true})
+
 -- Noice blocked the text!!!
 km.set("n","<leader>nd","<cmd>NoiceDismiss<cr>",{desc="Noice Dismiss",silent=true})
 
@@ -36,6 +42,7 @@ km.set({"n","v"},"<A-h>","10h",{desc="Super Left",silent=true})
 km.set({"n","v"},"<A-l>","10l",{desc="Super Right",silent=true})
 km.set({"n","v"},"<A-y>","5<C-y>",{desc="Super C-y",silent=true})
 km.set({"n","v"},"<A-e>","5<C-e>",{desc="Super C-e",silent=true})
+-- km.set({"n","v"},"<A-/>","/\\<\\><left><left>",{desc="Super C-e",silent=true})
 
 -- Move to window using the <ctrl> hjkl keys
 km.set("n","<C-h>","<C-w>h",{desc="Go to Left Window",remap=true,silent=true})

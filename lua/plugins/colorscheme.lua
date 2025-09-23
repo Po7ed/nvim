@@ -3,10 +3,10 @@ return {
 	lazy = false,
 	priority = 1000,
 	opts = {
-		transparent=true,
-		styles = {
-			sidebars = "transparent", -- style for sidebars, see below
-			floats = "transparent", -- style for floating windows
-		}
+		-- transparent=true,
+		-- styles = {
+		-- 	sidebars = "transparent", -- style for sidebars, see below
+		-- 	floats = "transparent", -- style for floating windows
+		-- }
 	},
 }

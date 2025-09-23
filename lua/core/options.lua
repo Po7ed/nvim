@@ -6,16 +6,16 @@ if vim.g.neovide then
 	-- vim.g.neovide_background_image = "/mnt/G/zjd/58186011_p0_.jpg"
 	-- vim.g.neovide_background_opacity = 0.8
 	-- vim.g.neovide_neovide_opacity = 0.5
-	vim.g.neovide_opacity = 0.8
-	vim.g.neovide_normal_opacity = 0.8
+	-- vim.g.neovide_opacity = 0.8
+	-- vim.g.neovide_normal_opacity = 0.8
 end
 
 opt.number=true
 opt.relativenumber=true
 
-opt.tabstop=4
-opt.shiftwidth=4
-opt.softtabstop=4
+opt.tabstop=2
+opt.shiftwidth=2
+opt.softtabstop=2
 opt.expandtab=false
 
 opt.splitright=true
@@ -44,7 +44,7 @@ opt.smartindent=true
 opt.cindent=true
 
 opt.list=true
-opt.lcs="tab:| ,trail:-,lead:."
+opt.lcs="tab:▏ ,trail:-,lead:."
 
 opt.acd=true
 opt.ar=true

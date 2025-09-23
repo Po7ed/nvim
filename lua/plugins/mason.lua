@@ -3,6 +3,7 @@ return {
 		"williamboman/mason.nvim",
 		lazy=true,
 		event="VeryLazy",
+		version="^1.0.0",
 		config=function()
 			require("mason").setup({
 				ui = {
@@ -19,6 +20,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		lazy=true,
 		event="VeryLazy",
+		version="^1.0.0",
 		config=function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {

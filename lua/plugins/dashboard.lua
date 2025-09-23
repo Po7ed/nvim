@@ -92,7 +92,7 @@ return {
 						local sta=require("lazy").stats()
 						return
 						{
-							" " .. sta.startuptime .. " ms",
+							" " .. math.floor(sta.startuptime+0.5) .. " ms",
 							"󰩦 " .. sta.loaded .. " / " .. sta.count,
 							-- " Los! Los! Los!",
 						}
