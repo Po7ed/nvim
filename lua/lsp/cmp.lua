@@ -75,3 +75,6 @@ sources = cmp.config.sources({
 	{ name = 'buffer' },
 })
 })
+
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("clangd")

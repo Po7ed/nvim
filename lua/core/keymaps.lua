@@ -12,7 +12,7 @@ km.set("n","<leader>d","<cmd>Dashboard<cr>",{desc="Open Dashboard",silent=true})
 km.set("n","<leader>t","<cmd>Telescope<cr>",{desc="Open Telescope",silent=true})
 
 -- Noice blocked the text!!!
-km.set("n","<leader>nd","<cmd>NoiceDismiss<cr>",{desc="Noice Dismiss",silent=true})
+-- km.set("n","<leader>nd","<cmd>NoiceDismiss<cr>",{desc="Noice Dismiss",silent=true})
 
 -- km.set("i","<BS>","<Esc>lcb",{desc="Delete to the begin of current word",silent=true})
 
@@ -20,10 +20,10 @@ km.set("n","K","<cmd>bd!<cr>",{desc="Delete Buffer!",silent=true})
 km.set("n","Q","<cmd>q!<cr>",{desc="Close Window!",silent=true})
 
 -- Split
-km.set("n","<leader>sv","<C-w>v",{desc="Split Vertically",silent=true})
-km.set("n","<leader>ss","<C-w>s",{desc="Split",silent=true})
-km.set("n","<leader>sc","<C-w>c",{desc="Close",silent=true})
-km.set("n","<leader>sx","<C-w>x",{desc="Swap",silent=true})
+km.set("n","<leader>s","<C-w>v",{desc="Split Vertically",silent=true})
+-- km.set("n","<leader>ss","<C-w>s",{desc="Split",silent=true})
+-- km.set("n","<leader>sc","<C-w>c",{desc="Close",silent=true})
+-- km.set("n","<leader>sx","<C-w>x",{desc="Swap",silent=true})
 
 -- km.set("n","<leader>sh","<C-w>h")
 -- km.set("n","<leader>sj","<C-w>j")
@@ -45,10 +45,10 @@ km.set({"n","v"},"<A-e>","5<C-e>",{desc="Super C-e",silent=true})
 -- km.set({"n","v"},"<A-/>","/\\<\\><left><left>",{desc="Super C-e",silent=true})
 
 -- Move to window using the <ctrl> hjkl keys
-km.set("n","<C-h>","<C-w>h",{desc="Go to Left Window",remap=true,silent=true})
-km.set("n","<C-j>","<C-w>j",{desc="Go to Lower Window",remap=true,silent=true})
-km.set("n","<C-k>","<C-w>k",{desc="Go to Upper Window",remap=true,silent=true})
-km.set("n","<C-l>","<C-w>l",{desc="Go to Right Window",remap=true,silent=true})
+-- km.set("n","<C-h>","<C-w>h",{desc="Go to Left Window",remap=true,silent=true})
+-- km.set("n","<C-j>","<C-w>j",{desc="Go to Lower Window",remap=true,silent=true})
+-- km.set("n","<C-k>","<C-w>k",{desc="Go to Upper Window",remap=true,silent=true})
+-- km.set("n","<C-l>","<C-w>l",{desc="Go to Right Window",remap=true,silent=true})
 
 -- Resize window using <ctrl> arrow keys
 km.set("n","<C-Up>","<cmd>resize +2<cr>",{desc="Increase Window Height",silent=true})
@@ -59,13 +59,13 @@ km.set("n","<C-Right>","<cmd>vertical resize +2<cr>",{desc="Increase Window Widt
 -- buffers
 km.set("n","H","<cmd>bp!<cr>",{desc="Prev Buffer",silent=true})
 km.set("n","L","<cmd>bn!<cr>",{desc="Next Buffer",silent=true})
-km.set("n","K","<cmd>bd!<cr>",{desc="Delete Buffer",silent=true})
+-- km.set("n","K","<cmd>bd!<cr>",{desc="Delete Buffer",silent=true})
 -- km.set("n","<leader>bd","<cmd>bd<cr>",{desc="Delete Buffer",silent=true})
 -- km.set("n","<leader>bD","<cmd>bd!<cr>",{desc="Delete Buffer!",silent=true})
 
 -- save file
-km.set({"i","x","n","s"},"<C-s>","<cmd>w<cr>",{desc="Save File",silent=true})
-km.set("n","<leader>w","<cmd>w<cr>",{desc="Save File",silent=true})
+-- km.set({"i","x","n","s"},"<C-s>","<cmd>w<cr>",{desc="Save File",silent=true})
+-- km.set("n","<leader>w","<cmd>w<cr>",{desc="Save File",silent=true})
 
 -- lazy
 km.set("n","<leader>l","<cmd>Lazy<cr>",{desc="Lazy",silent=true})
@@ -74,22 +74,22 @@ km.set("n","<leader>l","<cmd>Lazy<cr>",{desc="Lazy",silent=true})
 km.set("n","<C-n>","<cmd>enew<cr>",{desc="New File",silent=true})
 
 -- quit
-km.set("n","<leader>qq","<cmd>qa<cr>",{desc="Quit All",silent=true})
-km.set("n","<leader>QQ","<cmd>qa!<cr>",{desc="Quit All!",silent=true})
+-- km.set("n","<leader>qq","<cmd>qa<cr>",{desc="Quit All",silent=true})
+-- km.set("n","<leader>QQ","<cmd>qa!<cr>",{desc="Quit All!",silent=true})
 
 -- nvim-tree
-km.set("n","<leader>eo","<cmd>NvimTreeOpen<cr>",{desc="Open the Tree",silent=true})
-km.set("n","<leader>ec","<cmd>NvimTreeClose<cr>",{desc="Close the Tree",silent=true})
-km.set("n","<leader>et","<cmd>NvimTreeToggle<cr>",{desc="Toggle the Tree",silent=true})
-km.set("n","<leader>ee","<cmd>NvimTreeToggle<cr>",{desc="Toggle the Tree",silent=true})
-km.set("n","<leader>ef","<cmd>NvimTreeFocus<cr>",{desc="Tree Focus",silent=true})
-km.set("n","<leader>er","<cmd>NvimTreeRefresh<cr>",{desc="Refresh the Tree",silent=true})
-km.set("n","<leader>eR","<cmd>NvimTreeClose<cr><cmd>NvimTreeOpen<cr>",{desc="Force Refresh the Tree",silent=true})
-km.set("n","<leader>e-","<cmd>NvimTreeCollapse<cr>",{desc="Collapse the Tree",silent=true})
-km.set("n","<leader>e,","<cmd>NvimTreeResize -1<cr>",{desc="Resize(-1) the Tree",silent=true})
-km.set("n","<leader>e.","<cmd>NvimTreeResize +1<cr>",{desc="Resize(+1) the Tree",silent=true})
-km.set("n","<leader>e<","<cmd>NvimTreeResize -5<cr>",{desc="Resize(-5) the Tree",silent=true})
-km.set("n","<leader>e>","<cmd>NvimTreeResize +5<cr>",{desc="Resize(+5) the Tree",silent=true})
+-- km.set("n","<leader>eo","<cmd>NvimTreeOpen<cr>",{desc="Open the Tree",silent=true})
+-- km.set("n","<leader>ec","<cmd>NvimTreeClose<cr>",{desc="Close the Tree",silent=true})
+-- km.set("n","<leader>et","<cmd>NvimTreeToggle<cr>",{desc="Toggle the Tree",silent=true})
+km.set("n","<leader>e","<cmd>NvimTreeToggle<cr>",{desc="Toggle the Tree",silent=true})
+-- km.set("n","<leader>ef","<cmd>NvimTreeFocus<cr>",{desc="Tree Focus",silent=true})
+-- km.set("n","<leader>er","<cmd>NvimTreeRefresh<cr>",{desc="Refresh the Tree",silent=true})
+-- km.set("n","<leader>eR","<cmd>NvimTreeClose<cr><cmd>NvimTreeOpen<cr>",{desc="Force Refresh the Tree",silent=true})
+-- km.set("n","<leader>e-","<cmd>NvimTreeCollapse<cr>",{desc="Collapse the Tree",silent=true})
+-- km.set("n","<leader>e,","<cmd>NvimTreeResize -1<cr>",{desc="Resize(-1) the Tree",silent=true})
+-- km.set("n","<leader>e.","<cmd>NvimTreeResize +1<cr>",{desc="Resize(+1) the Tree",silent=true})
+-- km.set("n","<leader>e<","<cmd>NvimTreeResize -5<cr>",{desc="Resize(-5) the Tree",silent=true})
+-- km.set("n","<leader>e>","<cmd>NvimTreeResize +5<cr>",{desc="Resize(+5) the Tree",silent=true})
 
 -- telescope
 -- local builtin = require('telescope.builtin')
@@ -111,7 +111,7 @@ km.set("n","<F6>","<cmd>vsplit term://./%<cr>i",{desc="Run File",silent=true})
 km.set("n","<F8>","<cmd>vsplit term://g++ % -o %< -O2 -std=c++14 -w -DONLINE_JUDGE<cr>i",{desc="Compile with O2",silent=true})
 km.set("n","<F9>","<cmd>vsplit term://g++ % -o %< -g -std=c++14 -Wall -Wextra -Wshadow -Wconversion -fsanitize=address,undefined<cr>i",{desc="Compile with debug",silent=true})
 km.set("n","<F10>","<cmd>vsplit term://time ./%<<cr>i",{desc="Run Program",silent=true})
-km.set("n","<leader>rm","<cmd>e term://rich % --force-terminal --markdown --rule --padding 1 --hyperlinks --pager<cr>i",{desc="Render Markdown",silent=true})
+-- km.set("n","<leader>rm","<cmd>e term://rich % --force-terminal --markdown --rule --padding 1 --hyperlinks --pager<cr>i",{desc="Render Markdown",silent=true})
 
 km.set("n","<leader>h","<cmd>HopWord<cr>",{desc="Hop Word",silent=true})
 km.set("n","S","<cmd>HopWord<cr>",{desc="Hop Word",silent=true})

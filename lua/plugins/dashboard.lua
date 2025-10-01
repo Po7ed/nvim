@@ -77,7 +77,7 @@ return {
 					-- },
 					{
 						icon = "  ",
-						desc = "Edit Configuration",
+						desc = "Configure",
 						action = "e ~/.config/nvim/init.lua",
 						key = "c",
 					},
