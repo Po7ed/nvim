@@ -12,7 +12,7 @@ km.set("n","<leader>d","<cmd>Dashboard<cr>",{desc="Open Dashboard",silent=true})
 km.set("n","<leader>t","<cmd>Telescope<cr>",{desc="Open Telescope",silent=true})
 
 -- Noice blocked the text!!!
--- km.set("n","<leader>nd","<cmd>NoiceDismiss<cr>",{desc="Noice Dismiss",silent=true})
+km.set("n","<leader>n","<cmd>NoiceDismiss<cr>",{desc="Noice Dismiss",silent=true})
 
 -- km.set("i","<BS>","<Esc>lcb",{desc="Delete to the begin of current word",silent=true})
 
