@@ -6,7 +6,7 @@ return {
 	config=function()
 		require('lualine').setup
 		{
-			options = { disabled_filetypes = {'dashboard'},theme = 'tokyonight-day' }
+			options = { disabled_filetypes = {'dashboard'},theme = 'auto' }
 		}
 	end,
 }
