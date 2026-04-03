@@ -26,7 +26,9 @@ cmp.setup({
 	-- 	entries="custom",
 	-- },
 	window = {
-		completion = cmp.config.window.bordered(),
+		-- completion =  cmp.config.window.bordered(),
+		completion = { border = "rounded", max_height = 10 },
+		-- documentation = {border="double"},
 		-- documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
