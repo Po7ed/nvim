@@ -1,3 +1,4 @@
+
 return {
 	'nvimdev/dashboard-nvim',
 	event = 'VimEnter',
@@ -79,7 +80,7 @@ return {
 					{
 						icon = "  ",
 						desc = "Configure",
-						action = "e ~/.config/nvim/init.lua",
+						action = "e " .. (vim.uv.os_uname().sysname == "Windows_NT" and "~\\AppData\\Local\\nvim\\init.lua" or "~/.config/nvim/init.lua"),
 						key = "c",
 					},
 					{

@@ -1,15 +1,16 @@
 -- get OS
-if vim.fn.exists('g:os') == 0 then
-	local is_windows = vim.fn.has("win64") == 1 or vim.fn.has("win32") == 1 or vim.fn.has("win16") == 1
-	if is_windows then
-		vim.g.os = "Windows"
-	elseif vim.fn.has("wsl")==1 then
-		vim.g.os="WSL"
-	else
-		local uname_output = vim.fn.system('uname')
-		vim.g.os = string.gsub(uname_output, '\n', '')
-	end
-end
+-- ! use vim.uv.os_uname().sysname instead
+-- if vim.fn.exists('g:os') == 0 then
+-- 	local is_windows = vim.fn.has("win64") == 1 or vim.fn.has("win32") == 1 or vim.fn.has("win16") == 1
+-- 	if is_windows then
+-- 		vim.g.os = "Windows"
+-- 	elseif vim.fn.has("wsl")==1 then
+-- 		vim.g.os="WSL"
+-- 	else
+-- 		local uname_output = vim.fn.system('uname')
+-- 		vim.g.os = string.gsub(uname_output, '\n', '')
+-- 	end
+-- end
 
 if vim.g.vscode then
 	return
@@ -24,8 +25,10 @@ require("core.autocmds")
 vim.g.loaded_netrw=1
 vim.g.loaded_netrwPlugin=1
 
+local path_sep = vim.uv.os_uname().sysname == "Windows_NT" and "\\" or "/"
+
 -- auto install lazy
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local lazypath = vim.fn.stdpath("data") .. path_sep .. "lazy" .. path_sep .. "lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
@@ -54,7 +57,7 @@ vim.opt.shadafile = "NONE"
 vim.api.nvim_create_autocmd("CmdlineEnter", {
 	once = true,
 	callback = function()
-		local shada = vim.fn.stdpath("state") .. "/shada/main.shada"
+		local shada = vim.fn.stdpath("state") .. path_sep .. "shada" .. path_sep .. "main.shada"
 		vim.o.shadafile = shada
 		vim.api.nvim_command("rshada! " .. shada)
 	end,

@@ -2,8 +2,8 @@ vim.g.mapleader=" "
 
 local km=vim.keymap
 
-km.set("i","jk","<Esc>")
-km.set("t","jk","<C-\\><C-n>")
+-- km.set("i","jk","<Esc>")
+-- km.set("t","jk","<C-\\><C-n>")
 
 -- km.set("c","<A-[>","<up>",{desc="Up",silent=true});
 -- km.set("c","<A-]>","<down>",{desc="Down",silent=true});
@@ -17,11 +17,11 @@ km.set("n","<leader>n","<cmd>NoiceDismiss<cr>",{desc="Noice Dismiss",silent=true
 -- km.set("i","<BS>","<Esc>lcb",{desc="Delete to the begin of current word",silent=true})
 
 km.set("n","K","<cmd>bd!<cr>",{desc="Delete Buffer!",silent=true})
-km.set("n","Q","<cmd>q!<cr>",{desc="Close Window!",silent=true})
+-- km.set("n","Q","<cmd>q!<cr>",{desc="Close Window!",silent=true})
 
 -- Split
-km.set("n","<leader>s","<C-w>v",{desc="Split Vertically",silent=true})
--- km.set("n","<leader>ss","<C-w>s",{desc="Split",silent=true})
+-- km.set("n","<leader>s","<C-w>v",{desc="Split Vertically",silent=true})
+-- km.set("n","<leader>S","<C-w>s",{desc="Split",silent=true})
 -- km.set("n","<leader>sc","<C-w>c",{desc="Close",silent=true})
 -- km.set("n","<leader>sx","<C-w>x",{desc="Swap",silent=true})
 

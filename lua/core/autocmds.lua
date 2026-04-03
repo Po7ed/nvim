@@ -4,12 +4,12 @@ if vim.g.os=="Windows" or vim.g.os=="WSL" then
 	vim.api.nvim_create_autocmd("InsertEnter",
 	{
 		pattern={"*.md","*.tex","*.txt"},
-		command="silent !im-select.exe 2052",
+		command="silent !im-select.exe 2052", -- Chinese
 	})
 	vim.api.nvim_create_autocmd("InsertLeave",
 	{
 		pattern={"*.md","*.tex","*.txt"},
-		command="silent !im-select.exe 1033",
+		command="silent !im-select.exe 1033", -- English
 	})
 elseif vim.g.os=="Linux" then
 	-- not sure
